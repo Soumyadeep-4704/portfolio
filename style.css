@@ -1,0 +1,399 @@
+body{
+  background-color: #2D2D30;
+  color: #ffffff;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar Styles */
+.navbar { 
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a.navItem{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5em;
+    position: relative;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* Hover Effect for navbar items */
+a.navItem::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4DFFFF;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+  
+a.navItem:hover::after {
+    width: 100%;
+}
+
+/* Sidebar Styles */
+#hamburger{
+  display: none;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(12, 11, 11, 0.644);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sideItem{
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  padding: 1.5em;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Different Sections Style */
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+/* Style for Section with id "Home" */
+#home{
+  column-gap: 200px;
+}
+
+.home-content{
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
+.name{
+  font-size: 4rem;
+  font-family:  "Ga Maamli", fantasy;
+}
+
+/* Gradient Style for text */
+.gradient-text{
+  background: linear-gradient(to left, #0000ff, #4DFFFF, #00ffff, #FF4DFF);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.smallText{
+  margin-left: 100px;
+  font-size: 1.45rem;
+  font-weight: 400;
+  word-spacing: 4px;
+}
+
+img.profile{
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+/* Button Styles */
+.btn{
+  background-color: #4DFFFF;
+  color: #2D2D30;
+  text-decoration: none;
+  font-family: "Lobster", cursive;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-left: 100px;
+  border: 2px #2D2D30;
+  padding: 12px;
+  border-radius: 18px;
+}
+
+/* Hover effect for button */
+.btn:hover{
+  background: linear-gradient(to left, #0000ff, #4DFFFF, #00ffff, #FF4DFF);
+  height: 12px;
+  padding: 15px;
+}
+
+/* Style for Section with id's "#about, #education, #skills, #projects" */
+#about, #education, #skills, #projects, #contact{
+  flex-direction: column;
+}
+
+.about-content{
+  font-family: "Lobster", cursive;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Headings Style */
+h1.heading{
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to left, #0000ff, #4DFFFF, #00ffff, #FF4DFF);
+  border-image-slice: 1;
+}
+
+.cardContainer{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20rem;
+  height: 100vh;
+}
+
+/* styles for square cards with ronded corner */
+.card{
+  background-color: #00ffff;
+  height: 250px;
+  width: 250px;
+  border-radius: 22px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+/* style for rounded circular cards */
+.round{
+  border-radius: 50%;
+}
+
+.cardHeading{
+  position: absolute;
+  margin: 75px 34.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #2D2D30;
+  font-weight: bolder;
+}
+
+.cardText{
+  font-family: cursive;
+  text-transform: none;
+  font-weight: 200;
+  font-size: 10.75px;
+}
+
+.round > .cardHeading{
+  margin-top: 75px;
+  margin-left: 65px;
+}
+
+/* Hover Effect for card */
+.card:hover{
+  background: linear-gradient(to left, #0000ff, #4DFFFF, #00ffff, #FF4DFF);
+  transform: scale(1.2);
+}
+
+/* Contact section styling for handles */
+.message{
+  font-family: "Lobster", cursive;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.buttonContainer{
+  margin-top: 60px;
+  font-family: "Lobster", cursive;
+}
+
+.handles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+  column-gap: 40px;
+}
+
+.handles > a > i.fa{
+  font-size: 1.5rem;
+  color: #4DFFFF;
+}
+
+/* hover effect for handles link */
+.handles > a > i.fa:hover{
+  color: #FF4DFF;
+}
+
+.footer{
+  display: block;
+}
+
+.footer > a.copyright{
+  color: whitesmoke;
+}
+
+/* Styling the skills section */
+.skillText{
+  font-family: "Times Roman", serif;
+}
+
+/* Style for skill bar background */
+.barContainer{
+  height: 1rem;
+  width: 20%;
+  background-color: #606060;
+  border-radius: 10px;
+}
+
+/* Style for the bar level */
+.barLevel{
+  background: linear-gradient(to left, #00ffff, #0000ff);
+  height: 1rem;
+  border-radius: 10px;
+}
+
+.beginner{
+  width: 38%;
+}
+
+.intermediate{
+  width: 68%;
+}
+
+.advanced{
+  width: 88%;
+}
+
+
+
+
+
+
+
+
+
+
+/*For small screens */
+
+@media (max-width:600px) {
+
+  body{
+    background-color: #2D2D30;
+  }
+
+  .navItem{
+    display: none;
+  }
+
+  #hamburger{
+    display: block;
+    margin-left: 80%;
+  }
+
+  #cross{
+    margin-left: 8%;
+  }
+
+  /* Different Sections Style */
+  .section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Style for Section */
+  #home, #about, #education, #skills, #projects{
+    flex-direction: column;
+  }
+
+  img.profile{
+    height: 200px;
+    width: 200px;
+  }
+
+  .home-content{
+    font-size: 1rem;
+  }
+
+  .name{
+    font-size: 1.5rem;
+  }
+
+  .smallText{
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+
+  .btn{
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-left: 30px;
+  }
+
+  /* removing the hover effect */
+  .btn:hover {
+    background: #00ffff;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  /* adding style for on click effect */
+  .btn:active {
+    background: linear-gradient(to left, #0000ff, #00ffff, #FF4DFF, #4DFFFF);
+  }
+
+  /* card container styles */
+  .cardContainer{
+    display: block;;
+  }
+
+  .card{
+    height: 200px;
+    width: 200px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .cardHeading{
+    margin: 15px 10px;
+    font-size: 0.6rem;
+  }
+
+  .round > .cardHeading{
+    margin-top: 65px;
+    margin-left: 28px;
+  }
+
+  .cardText{
+    font-size: 0.5rem;
+  }
+
+  /* hover effect transformation removal */
+  .card:hover{
+    background: #00ffff;
+    transform: none;
+  }
+
+  h1.heading{
+    font-size: 2.2rem;
+    margin: 100px;
+  }
+  
+}
