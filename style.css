@@ -314,7 +314,7 @@ h1.heading{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98%;
+    height: 100%;
     width: 100%;
   }
 
@@ -343,7 +343,7 @@ h1.heading{
 
   .btn{
     padding: 0.5rem;
-    font-size: 1.12rem;
+    font-size: 1.01rem;
     margin-left: 30px;
   }
 
